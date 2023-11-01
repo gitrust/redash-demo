@@ -1,6 +1,6 @@
 
 setup:
-	docker compose pull
+	make pull
 	make run-db
 	make db
 
@@ -8,7 +8,7 @@ start:
 	docker compose up -d 
 
 pull:
-	docker pull redash/redash:latest
+	docker compose pull
 
 stop:
 	docker compose down
