@@ -1,6 +1,6 @@
 # Redash Demo
 
-This is sandbox environment for [redash](https://redash.io), an awesome dashboard to visualize data.
+This is sandbox demo environment for [redash](https://redash.io), an awesome dashboard to visualize data.
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ Following commands pull docker images, create and init the database and startup 
 
 ```
 make setup
-make up
+make start
 ```
 
 ## Open UI
@@ -19,33 +19,18 @@ make up
 
 ## Clean up
 
-To reset data and start from scratch run
+To reset data and start from scratch run. It removes docker volumes and local db folder.
 
 `make cleanup`
 
-## Notes
-
-Change secrets when using in a production environment.
-Visit [redash project](https://github.com/getredash/redash) for getting help
-
-# Change password  (not needed)
-
-```
-c0bb85df8b21:~$ psql postgres
-psql (15.3)
-Type "help" for help.
-
-postgres=# ALTER USER postgres WITH PASSWORD 'pass';
-ALTER ROLE
-postgres=# \q
-c0bb85df8b21:~$ exit
-```
-
-
 ## Running services
 
+Just an info for curious people which shows services running after startup of redash
 
-```
+
+```bash
+docker stats --no-stream
+
 CONTAINER ID   NAME                        CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O   PIDS
 0cc74d271507   redash-nginx-1              0.00%     2.848MiB / 3.313GiB   0.08%     2.69MB / 2.35MB   0B / 0B     2
 e255cf720ca5   redash-scheduled_worker-1   0.60%     207.2MiB / 3.313GiB   6.11%     5.5MB / 3.02MB    0B / 0B     2
@@ -56,3 +41,8 @@ f08018a78677   redash-scheduler-1          0.31%     288.5MiB / 3.313GiB   8.50%
 1ec43efb68d3   redash-postgres-1           0.04%     30.27MiB / 3.313GiB   0.89%     3.25MB / 2.9MB    0B / 0B     12
 ```
 
+## Notes
+
+- Change secrets in `.env` when using in a production environment.
+- Visit [redash project](https://github.com/getredash/redash) for getting help.
+- docker-compose.yml is copied original project
