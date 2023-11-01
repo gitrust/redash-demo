@@ -45,4 +45,4 @@ f08018a78677   redash-scheduler-1          0.31%     288.5MiB / 3.313GiB   8.50%
 
 - Change secrets in `.env` when using in a production environment.
 - Visit [redash project](https://github.com/getredash/redash) for getting help.
-- docker-compose.yml is copied original project
+- docker-compose.yml is copied original project ( [LICENSE](https://github.com/getredash/redash/blob/master/LICENSE) )
