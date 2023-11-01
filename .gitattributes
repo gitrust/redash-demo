@@ -1,0 +1,18 @@
+* text=auto
+
+
+*.txt     text
+*.md      text
+*.yaml    text
+*.yml     text
+*.scad    text eol=lf
+*.gnu     text eol=lf
+*.gnuplot text eol=lf
+*.sh      eol=lf
+*.csv     text eol=lf
+*.bat     eol=cr
+Dockerfile  text
+Makefile  eol=lf
+.gnuplot  text eol=lf
+*.jpg     binary
+*.png     binary
