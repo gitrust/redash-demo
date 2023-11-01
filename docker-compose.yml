@@ -1,3 +1,10 @@
+
+# Copied and modified from original project
+# https://github.com/getredash/redash/blob/master/LICENSE
+#
+# Copyright (c) 2013-2020, Arik Fraimovich.
+# All rights reserved.
+
 version: "2"
 x-redash-service: &redash-service
   image: redash/redash:8.0.0.b32245
